@@ -1,10 +1,13 @@
 version: '3'
 services:
-  vigicovid_qa_module:
+  vigicovid_answer_api:
     build:
       context: ./
       dockerfile: Dockerfile
     # volumes:
     #   - ./app/models:/app/models
     ports:
-      - '9020:8081'
+      - '9024:8080'
+volumes:
+  data01:
+    driver: local

@@ -1,14 +1,14 @@
 server:
-  # host: 0.0.0.0
-  host: 127.0.0.1
-  port: 8000
+  host: 0.0.0.0
+  # host: 127.0.0.1
+  port: 8080
 
 app:
   username: ${env:USER}
 
 flask:
-  ENV: debug
-  DEBUG: True
+  ENV: production
+  DEBUG: False
   TESTING: False
   PROPAGATE_EXCEPTIONS: null
   PRESERVE_CONTEXT_ON_EXCEPTION: null
@@ -36,6 +36,7 @@ flask:
   JSONIFY_MIMETYPE: application/json
   TEMPLATES_AUTO_RELOAD: null
   MAX_COOKIE_SIZE: 4093
+
 
 hydra:
   # disable changing of cwd as it interferes with flask auto-restart
