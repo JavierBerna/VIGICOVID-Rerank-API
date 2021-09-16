@@ -1,13 +1,13 @@
 version: '3'
 services:
-  vigicovid_answer_api:
+  vigicovid_answer-rerank_api:
     build:
       context: ./
       dockerfile: Dockerfile
     # volumes:
     #   - ./app/models:/app/models
     ports:
-      - '9024:8080'
+      - '9026:8080'
 volumes:
   data01:
     driver: local

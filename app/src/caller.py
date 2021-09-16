@@ -51,8 +51,8 @@ def call_ES(question,index,publish_time,topk):
 
 	return contexts
 
-def call_QA(question,contexts,qa_cut):
-	url = f"http://vespa.lsi.uned.es:9000/vigicovid-qa-module/span"
+def call_Rerank(question,contexts,qa_cut):
+	url = f"http://vespa.lsi.uned.es:9000/vigicovid-rerank-module/rerank"
 
 	body = [{
 		"question":question,

@@ -15,7 +15,7 @@ os.chdir(dname)
 from flask import Flask, current_app, request, jsonify
 app = Flask(__name__)
 
-@app.route('/answer',methods=['POST'])
+@app.route('/answer-rerank',methods=['POST'])
 def answer():
 	"""
 		1 - Call ES
@@ -31,7 +31,7 @@ def answer():
 	contexts = caller.call_ES(question,index,publish_time,topk)
 
 	app.logger.info("Reading...")
-	response = caller.call_QA(question,contexts,qa_cut)
+	response = caller.call_Rerank(question,contexts,qa_cut)
 
 	app.logger.info("Done!")
 	return response

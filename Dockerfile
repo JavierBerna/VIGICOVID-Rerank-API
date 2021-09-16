@@ -1,5 +1,5 @@
 FROM python:3.7
-LABEL vigicovid.authors="lozanoAlvarez@gmail.com"
+LABEL vigicovid.authors="javierbernagarcia@gmail.com"
 
 RUN pip install --upgrade pip
 
